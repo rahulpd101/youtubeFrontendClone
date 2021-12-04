@@ -1,0 +1,134 @@
+.leftCol::-webkit-scrollbar {
+	width: 8px;
+	background: rgb(39, 39, 39);
+}
+
+.leftCol::-webkit-scrollbar-thumb {
+	background: gray;
+	border-radius: 12px;
+}
+
+input,
+textarea,
+[contenteditable] {
+	caret-color: white;
+	height: fit-content;
+}
+
+.App {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.leftCol {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	color: white;
+	height: calc(100vh - 56px);
+	background: rgb(39, 39, 39);
+	width: 240px;
+}
+
+.header {
+	display: flex;
+
+	align-items: center;
+	height: 56px;
+	background-color: rgb(39, 39, 39);
+}
+
+.searchBar {
+	display: flex;
+	height: 37px;
+	width: 660px;
+	align-items: center;
+	background-color: rgb(70, 69, 69);
+	cursor: pointer;
+}
+
+.searchBar > input {
+	width: 600px;
+	height: 91%;
+	margin: 0 15px 0 0.5px;
+	padding: 0;
+	background-color: rgb(27, 25, 25);
+	border: none;
+	color: white;
+	font-size: 17px;
+	text-indent: 10px;
+}
+
+.searchBar > input:focus-visible {
+	outline: blue auto 0.5px;
+}
+
+.searchBar > .searchIconContainer {
+	display: flex;
+	height: 37px;
+	width: 60px;
+	background-color: rgb(95, 95, 95);
+	align-items: center;
+}
+
+.headerButtons {
+	display: flex;
+	align-items: center;
+	height: 25px;
+	width: 160px;
+	background: inherit;
+}
+
+.delimiter {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	border-bottom: 0.01em solid rgba(93, 93, 93, 0.5);
+	padding-right: 10px;
+}
+
+.links {
+	margin: 17px 0 0 10px;
+	padding-left: 15px;
+}
+
+.links > ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	color: rgb(196, 196, 196);
+	flex-wrap: wrap;
+	max-width: 200px;
+	font-size: small;
+	line-height: 17px;
+}
+
+.links > ul > li {
+	cursor: pointer;
+}
+
+.links > ul > li:not(:last-child) {
+	margin-right: 10px;
+}
+
+.links:last-child {
+	margin-bottom: 10px;
+}
+
+.copyright {
+	margin: 10px 0 10px 10px;
+	font-size: small;
+	padding-left: 15px;
+	color: rgb(133, 133, 133);
+}
+
+.container {
+	border-bottom: 0.5px solid grey;
+}
+
+.videoListContainer > .videoContainer {
+	height: 80px;
+	width: 100px;
+}
