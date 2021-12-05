@@ -8,6 +8,16 @@
 	border-radius: 12px;
 }
 
+.rightCol::-webkit-scrollbar {
+	width: 8px;
+	background: rgb(39, 39, 39);
+}
+
+.rightCol::-webkit-scrollbar-thumb {
+	background: grey;
+	border-radius: 12px;
+}
+
 input,
 textarea,
 [contenteditable] {
@@ -122,6 +132,42 @@ textarea,
 	font-size: small;
 	padding-left: 15px;
 	color: rgb(133, 133, 133);
+}
+
+.sliderContainer > .slider {
+	align-items: center;
+	width: calc(100vw - 240px);
+	height: 55px;
+	border-top: 1px solid grey;
+	border-bottom: 1px solid grey;
+}
+
+.slider > .sliderItem {
+	align-items: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	height: 35px;
+	color: white;
+	border: 1px solid rgba(93, 93, 93, 0.5);
+	border-radius: 110px;
+	margin-left: 12px;
+	background-color: rgba(93, 93, 93, 0.5);
+}
+
+.slider > .backwardCounter {
+	filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.4));
+	position: absolute;
+	cursor: pointer;
+	left: 5px;
+}
+
+.sliderContainer > .forwardCounter {
+	filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.4));
+	position: absolute;
+	cursor: pointer;
+	right: 5px;
 }
 
 .container {
