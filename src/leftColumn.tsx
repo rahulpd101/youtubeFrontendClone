@@ -1,13 +1,13 @@
-import React, { MouseEvent } from "react";
+import React from "react";
 import "./App.css";
 import { data } from "./data";
 
 const LeftCol: React.FC = () => {
-	const changeBackground = (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
-		if (e.currentTarget) {
-			e.currentTarget.style.backgroundColor = "darkgray";
-		}
-	};
+	// const changeBackground = (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
+	// 	if (e.currentTarget) {
+	// 		e.currentTarget.style.backgroundColor = "darkgray";
+	// 	}
+	// };
 
 	return (
 		<div
@@ -32,8 +32,9 @@ const LeftCol: React.FC = () => {
 						{items.map(({ image, itemName }) => {
 							return (
 								<div
-									onMouseEnter={changeBackground}
-									onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "inherit")}
+									// onMouseEnter={changeBackground}
+									// onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "inherit")}
+									className="sliderItem"
 									style={{
 										display: "flex",
 										color: "white",

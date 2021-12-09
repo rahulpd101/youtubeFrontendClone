@@ -38,7 +38,7 @@ textarea,
 	color: white;
 	height: calc(100vh - 56px);
 	background: rgb(39, 39, 39);
-	width: 240px;
+	min-width: 240px;
 }
 
 .header {
@@ -138,11 +138,14 @@ textarea,
 	align-items: center;
 	width: calc(100vw - 240px);
 	height: 55px;
-	border-top: 1px solid grey;
-	border-bottom: 1px solid grey;
+	overflow: hidden;
+	border-top: 1px solid rgb(58, 58, 58);
+	border-bottom: 1px solid rgb(58, 58, 58);
+	scroll-behavior: smooth;
 }
 
 .slider > .sliderItem {
+	cursor: pointer;
 	align-items: center;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -156,15 +159,32 @@ textarea,
 	background-color: rgba(93, 93, 93, 0.5);
 }
 
-.slider > .backwardCounter {
-	filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.4));
-	position: absolute;
+.sliderItem:hover {
+	background-color: #535353;
+}
+
+.sliderItem.active {
+	background-color: white;
+	color: black;
+}
+
+.sliderContainer > .backwardCounter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 57px;
+	width: 70px;
+	filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
 	cursor: pointer;
-	left: 5px;
+	position: absolute;
 }
 
 .sliderContainer > .forwardCounter {
-	filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.4));
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 57px;
+	width: 70px;
 	position: absolute;
 	cursor: pointer;
 	right: 5px;
@@ -175,6 +195,32 @@ textarea,
 }
 
 .videoListContainer > .videoContainer {
-	height: 80px;
-	width: 100px;
+	height: 300px;
+	width: 400px;
+}
+
+.videoContainer > .videoPreview {
+	height: 250px;
+	width: inherit;
+}
+
+.videoTitle {
+	display: flex;
+	width: inherit;
+	color: white;
+	font-weight: 500;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+.channelName {
+	padding-top: 5px;
+	font-size: small;
+	color: white;
+}
+
+.timeline {
+	padding-top: 5px;
+	font-size: small;
+	color: white;
 }

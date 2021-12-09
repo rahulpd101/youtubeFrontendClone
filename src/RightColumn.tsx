@@ -1,11 +1,13 @@
 import React, { MutableRefObject, useCallback, useEffect, useRef, useState } from "react";
 import "./App.css";
 import { ForwardCounter, PreviousCounter } from "./assets";
-import { sliderData } from "./data";
+import { sliderData, videoData } from "./data";
 
 const RightCol: React.FC = () => {
 	const [leftVisible, setLeftVisible] = useState(false);
 	const [rightVisible, setRightVisible] = useState(true);
+	const [selectedItem, setselectedItem] = useState(sliderData[0]);
+
 	const sliderRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
 
 	useEffect(() => {
@@ -38,7 +40,9 @@ const RightCol: React.FC = () => {
 		<div className="rightCol" style={{ display: "flex", flexDirection: "column" }}>
 			<div className="sliderContainer" style={{ display: "flex", alignItems: "center" }}>
 				{leftVisible && (
-					<img onClick={moveLeft} className="backwardCounter" src={PreviousCounter} alt="Previous" />
+					<div className="backwardCounter">
+						<img onClick={moveLeft} src={PreviousCounter} alt="Previous" />
+					</div>
 				)}
 				<div
 					ref={sliderRef}
@@ -49,7 +53,10 @@ const RightCol: React.FC = () => {
 					{sliderData.map((item) => {
 						return (
 							<div
-								className="sliderItem"
+								onClick={() => {
+									setselectedItem(item);
+								}}
+								className={selectedItem === item ? "sliderItem active" : "sliderItem"}
 								style={{
 									display: "flex",
 								}}>
@@ -59,7 +66,9 @@ const RightCol: React.FC = () => {
 					})}
 				</div>
 				{rightVisible && (
-					<img onClick={moveRight} className="forwardCounter" src={ForwardCounter} alt="Next" />
+					<div className="forwardCounter">
+						<img onClick={moveRight} src={ForwardCounter} alt="Next" />
+					</div>
 				)}
 			</div>
 			<div
@@ -68,22 +77,45 @@ const RightCol: React.FC = () => {
 					display: "flex",
 					height: "calc(100vh - 114px)",
 					width: "calc(100vw - 240px)",
-					overflowY: "hidden",
+					overflowY: "auto",
 				}}>
 				<div
 					className="videoListContainer"
 					style={{
 						display: "flex",
-						margin: "20px 20px 20px 20px",
-						height: "250px",
+						margin: "20px",
+						height: "820px",
 						width: "calc(100vw - 280px)",
 					}}>
-					<div className="videoContainer" style={{ display: "flex", flexDirection: "column" }}>
-						<div className="videoPreview"></div>
-						<div className="videoTitle"></div>
-						<div className="channelName"></div>
-						<div className="timeline"></div>
-					</div>
+					{videoData.map(({ videoPreview, channelLogo, videoTitle, channelName, views, timeOfPost }) => {
+						return (
+							<div
+								className="videoContainer"
+								style={{ display: "flex", flexDirection: "column", marginRight: 20 }}>
+								<video
+									key={videoPreview}
+									className="videoPreview"
+									// onMouseOver={(e) => e.target.play()}
+									// onMouseOut={(e) => e.target.pause()}
+									src={videoPreview}
+								/>
+								<div style={{ display: "flex", paddingTop: "10px" }}>
+									<img
+										style={{ borderRadius: "50%", height: 35, width: 35 }}
+										src={channelLogo}
+										alt="channel Logo"
+									/>
+									<div style={{ display: "flex", width: 350, flexDirection: "column", marginLeft: 10 }}>
+										<div className="videoTitle">{videoTitle}</div>
+										<div className="channelName">{channelName}</div>
+										<div className="timeline">
+											{views} • {timeOfPost}
+										</div>
+									</div>
+								</div>
+							</div>
+						);
+					})}
 				</div>
 			</div>
 		</div>
