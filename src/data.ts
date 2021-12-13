@@ -120,28 +120,28 @@ export const videoData = [{
     "channelName":"Linus Tech Tips",
     "views":"795K views",
     "timeOfPost":"16 hours ago"
-},
-{
-    "videoPreview": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
-    "channelLogo": "https://yt3.ggpht.com/fGvQjp1vAT1R4bAKTFLaSbdsfdYFDwAzVjeRVQeikH22bvHWsGULZdwIkpZXktcXZc5gFJuA3w=s68-c-k-c0x00ffffff-no-rj",
-    "videoTitle":"SPIDER-MAN: ACROSS THE SPIDER-VERSE (PART ONE) - First Look",
-    "channelName":"Marvel Entertainment",
-    "views":"2.9M views",
-    "timeOfPost":"4 days ago"
-},
-{
-    "videoPreview": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-    "channelLogo": "https://yt3.ggpht.com/ytc/AKedOLSBqsaJopctjWq-q-9cmPjDu3sUoYKGeZTuZ7wOd0w=s68-c-k-c0x00ffffff-no-rj",
-    "videoTitle":"Mentorship Session: Unraveling RCU-Usage Mysteries (Fundamentals)",
-    "channelName":"The Linux Foundation",
-    "views":"138 views",
-    "timeOfPost":"16 hours ago"
-},
-{
-    "videoPreview": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
-    "channelLogo": "https://yt3.ggpht.com/ytc/AKedOLTFLnUPOScnD78_Lz7YCbp0PXSpPgBTI4HA0pA8=s88-c-k-c0x00ffffff-no-rj",
-    "videoTitle":"If Squid Game were about Programmers",
-    "channelName":"Joma Tech",
-    "views":"446K views",
-    "timeOfPost":"13 days ago"
 }]
+// {
+//     "videoPreview": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+//     "channelLogo": "https://yt3.ggpht.com/fGvQjp1vAT1R4bAKTFLaSbdsfdYFDwAzVjeRVQeikH22bvHWsGULZdwIkpZXktcXZc5gFJuA3w=s68-c-k-c0x00ffffff-no-rj",
+//     "videoTitle":"SPIDER-MAN: ACROSS THE SPIDER-VERSE (PART ONE) - First Look",
+//     "channelName":"Marvel Entertainment",
+//     "views":"2.9M views",
+//     "timeOfPost":"4 days ago"
+// },
+// {
+//     "videoPreview": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+//     "channelLogo": "https://yt3.ggpht.com/ytc/AKedOLSBqsaJopctjWq-q-9cmPjDu3sUoYKGeZTuZ7wOd0w=s68-c-k-c0x00ffffff-no-rj",
+//     "videoTitle":"Mentorship Session: Unraveling RCU-Usage Mysteries (Fundamentals)",
+//     "channelName":"The Linux Foundation",
+//     "views":"138 views",
+//     "timeOfPost":"16 hours ago"
+// },
+// {
+//     "videoPreview": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+//     "channelLogo": "https://yt3.ggpht.com/ytc/AKedOLTFLnUPOScnD78_Lz7YCbp0PXSpPgBTI4HA0pA8=s88-c-k-c0x00ffffff-no-rj",
+//     "videoTitle":"If Squid Game were about Programmers",
+//     "channelName":"Joma Tech",
+//     "views":"446K views",
+//     "timeOfPost":"13 days ago"
+// }

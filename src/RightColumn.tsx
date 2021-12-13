@@ -17,7 +17,7 @@ const RightCol: React.FC = () => {
 		if (currentRef) {
 			currentRef.addEventListener("scroll", () => {
 				const end = currentRef.scrollWidth - currentRef.getBoundingClientRect().width - 8;
-				console.log(end);
+
 				setLeftVisible(currentRef.scrollLeft !== 0);
 				setRightVisible(currentRef.scrollLeft <= end);
 			});
@@ -27,13 +27,11 @@ const RightCol: React.FC = () => {
 	const moveLeft = useCallback(() => {
 		if (!sliderRef.current) return;
 		sliderRef.current.scrollLeft -= 200;
-		console.log("movedLeft");
 	}, [sliderRef]);
 
 	const moveRight = useCallback(() => {
 		if (!sliderRef.current) return;
 		sliderRef.current.scrollLeft += 200;
-		console.log("movedRight");
 	}, [sliderRef]);
 
 	return (
@@ -83,15 +81,14 @@ const RightCol: React.FC = () => {
 					className="videoListContainer"
 					style={{
 						display: "flex",
-						margin: "20px",
-						height: "820px",
+						margin: "20px 105px",
+						height: "320px",
 						width: "calc(100vw - 280px)",
+						justifyContent: "space-between",
 					}}>
 					{videoData.map(({ videoPreview, channelLogo, videoTitle, channelName, views, timeOfPost }) => {
 						return (
-							<div
-								className="videoContainer"
-								style={{ display: "flex", flexDirection: "column", marginRight: 20 }}>
+							<div className="videoContainer" style={{ display: "flex", flexDirection: "column" }}>
 								<video
 									key={videoPreview}
 									className="videoPreview"
@@ -105,7 +102,7 @@ const RightCol: React.FC = () => {
 										src={channelLogo}
 										alt="channel Logo"
 									/>
-									<div style={{ display: "flex", width: 350, flexDirection: "column", marginLeft: 10 }}>
+									<div style={{ display: "flex", width: 305, flexDirection: "column", marginLeft: 10 }}>
 										<div className="videoTitle">{videoTitle}</div>
 										<div className="channelName">{channelName}</div>
 										<div className="timeline">

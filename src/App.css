@@ -43,23 +43,42 @@ textarea,
 
 .header {
 	display: flex;
-
+	justify-content: space-between;
 	align-items: center;
 	height: 56px;
 	background-color: rgb(39, 39, 39);
 }
 
-.searchBar {
+.searchBarContainer {
+	display: flex;
+	height: 40px;
+	width: auto;
+	align-items: center;
+	cursor: pointer;
+}
+
+.searchBarContainer > .voiceInput {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 10px;
+	height: 40px;
+	width: 40px;
+	background: rgb(59, 59, 59);
+	border-radius: 50%;
+}
+
+.searchBarContainer > .searchBar {
 	display: flex;
 	height: 37px;
-	width: 660px;
+	width: 610px;
 	align-items: center;
 	background-color: rgb(70, 69, 69);
 	cursor: pointer;
 }
 
 .searchBar > input {
-	width: 600px;
+	width: 550px;
 	height: 91%;
 	margin: 0 15px 0 0.5px;
 	padding: 0;
@@ -159,6 +178,14 @@ textarea,
 	background-color: rgba(93, 93, 93, 0.5);
 }
 
+.slider > .sliderItem:first-child {
+	margin-left: 18px;
+}
+
+.slider > .sliderItem:last-child {
+	margin-right: 18px;
+}
+
 .sliderItem:hover {
 	background-color: #535353;
 }
@@ -195,8 +222,8 @@ textarea,
 }
 
 .videoListContainer > .videoContainer {
-	height: 300px;
-	width: 400px;
+	height: 250px;
+	width: 350px;
 }
 
 .videoContainer > .videoPreview {

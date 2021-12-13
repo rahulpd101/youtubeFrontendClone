@@ -4,6 +4,7 @@ import {ReactComponent as SearchIcon} from './svg/searchIcon.svg';
 import {ReactComponent as NotificationBell} from './svg/notificationsIcon.svg';
 import {ReactComponent as YoutubeApps} from './svg/youtubeApps.svg';
 import {ReactComponent as Create} from './svg/createVideo.svg';
+import {ReactComponent as VoiceSearch} from './svg/voiceSearch.svg';
 import  PreviousCounter from './svg/chevron-back-circle.svg';
 import  ForwardCounter from './svg/chevron-forward-circle.svg';
 import  HomeButton from './svg/homeButton.svg';
@@ -43,5 +44,6 @@ export {
     YoutubeApps,
     NotificationBell,
     PreviousCounter,
-    ForwardCounter
+    ForwardCounter,
+    VoiceSearch,
 }
