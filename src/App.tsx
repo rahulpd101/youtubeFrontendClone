@@ -12,8 +12,9 @@ const App: React.FC = () => {
 					style={{
 						display: "flex",
 						height: "25px",
-						width: "140px",
+						width: "150px",
 						marginLeft: "10px",
+						justifyContent: "space-between",
 					}}>
 					<MoreOptions style={{ width: "50px" }} />
 					<Logo style={{ width: "90px" }} />
@@ -23,7 +24,7 @@ const App: React.FC = () => {
 						<input placeholder="Search" />
 						<SearchIcon />
 					</div>
-					<div className="voiceInput" aria-label="Search with your voice">
+					<div className="voiceInput" title="Search with your voice" aria-label="Search with your voice">
 						<VoiceSearch style={{ height: 25, width: 25 }} />
 					</div>
 				</div>

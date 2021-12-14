@@ -65,7 +65,13 @@ const RightCol: React.FC = () => {
 				</div>
 				{rightVisible && (
 					<div className="forwardCounter">
-						<img onClick={moveRight} src={ForwardCounter} alt="Next" />
+						<div className="shade"></div>
+						<img
+							style={{ position: "absolute", cursor: "pointer" }}
+							onClick={moveRight}
+							src={ForwardCounter}
+							alt="Next"
+						/>
 					</div>
 				)}
 			</div>
