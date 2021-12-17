@@ -39,6 +39,7 @@ const RightCol: React.FC = () => {
 			<div className="sliderContainer" style={{ display: "flex", alignItems: "center" }}>
 				{leftVisible && (
 					<div className="backwardCounter">
+						<div className="shade"></div>
 						<img onClick={moveLeft} src={PreviousCounter} alt="Previous" />
 					</div>
 				)}
@@ -67,7 +68,7 @@ const RightCol: React.FC = () => {
 					<div className="forwardCounter">
 						<div className="shade"></div>
 						<img
-							style={{ position: "absolute", cursor: "pointer" }}
+							style={{ position: "absolute", cursor: "pointer", right: "26px" }}
 							onClick={moveRight}
 							src={ForwardCounter}
 							alt="Next"
@@ -87,9 +88,9 @@ const RightCol: React.FC = () => {
 					className="videoListContainer"
 					style={{
 						display: "flex",
-						margin: "20px 105px",
+						margin: "20px 20px",
 						height: "320px",
-						width: "calc(100vw - 280px)",
+						width: "calc(100vw - 200px)",
 						justifyContent: "space-between",
 					}}>
 					{videoData.map(({ videoPreview, channelLogo, videoTitle, channelName, views, timeOfPost }) => {

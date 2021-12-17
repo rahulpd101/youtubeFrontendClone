@@ -200,10 +200,18 @@ textarea,
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 57px;
-	width: 70px;
-	cursor: pointer;
+	height: 55px;
+	width: 58px;
 	position: absolute;
+	background: rgba(33, 33, 33, 0.98);
+}
+
+.backwardCounter > .shade {
+	height: inherit;
+	position: absolute;
+	width: 44px;
+	left: 40px;
+	background: linear-gradient(to right, rgba(33, 33, 33, 0.9) 60%, rgba(33, 33, 33, 0) 100%);
 }
 
 .sliderContainer > .forwardCounter {
@@ -212,21 +220,17 @@ textarea,
 	justify-content: center;
 	position: absolute;
 	height: 55px;
-	width: 70px;
+	width: 58px;
 	right: 0;
+	background: rgba(33, 33, 33, 0.98);
 }
 
 .shade {
 	height: inherit;
-	width: inherit;
-	background: rgba(33, 33, 33, 0.98);
-}
-
-.shade::before {
-	height: inherit;
-	width: inherit;
-	pointer-events: none;
-	background: linear-gradient(to left, #212121fa 20%, #21212100 80%);
+	position: absolute;
+	width: 44px;
+	left: -32px;
+	background: linear-gradient(to left, rgba(33, 33, 33, 0.9) 60%, rgba(33, 33, 33, 0) 100%);
 }
 
 .container {
